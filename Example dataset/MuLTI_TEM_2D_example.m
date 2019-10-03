@@ -254,8 +254,7 @@ if priors_OK == 1
     %%%%%%%%%% computing the forward model %%%%%%%%%%%
     if running_mode == 1
         forward_model = LEROI_TEM(npt+num_layers, 0, npt + num_layers, Res, linspace(1,(npt+num_layers),(npt+num_layers)), thickness);
-        forward_model = round(forward_model,6,'significant');
-    end   
+        forward_model = round(forward_model,6,'significant');  
     %%%%%%%%%% computing the misfit %%%%%%%%%%%
     misfit = NaN(length(data),1);
     for i = 2:length(timegate) % time samples, this should match the time samples.
@@ -263,8 +262,9 @@ if priors_OK == 1
     end %end misfit
 
     like = nansum( (misfit).^2 ./(2 * weighting.^2) );
-else
+    else
     like = 1;
+    end % end running mode = 1
 end
 
 like_best=1e99;
