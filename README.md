@@ -1,6 +1,8 @@
 # MuLTI-TEM 10x10
 Multimodal Layered Transdimensional Inversion of Time Domain Electromagnetic data with Depth Constraints
 
+(Can only be used for 10 x 10 m Tx with 15 m offset Rx, see https://github.com/eespr/MuLTI-TEM for all other survey options)
+
 The MuLTI-TEM algorithm was developed in Matlab version 2017a, therefore all Matlab codes supplied will work with this version or subsequent Matlab versions. This code can be run on Linux or Windows based platforms. This github repository includes: 
 1.	1D and 2D MuLTI-TEM Matlab scripts along with two matlab functions called in the main scripts, “thicknesses_and_priors” and “whichnuclei”,
 2.	1D and 2D example dataset used to test MuLTI-TEM 1D and 2D codes,
